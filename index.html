@@ -19,13 +19,14 @@
       width: 100%;
       height: 100%;
       transform: translate(-50%, -50%);
-      pointer-events: none; /* 禁止點擊操作 */
+      pointer-events: none; /* 禁止點擊 */
     }
   </style>
 </head>
 <body>
+  <!-- 在 URL 後面加上 ?v=1 避免快取問題 -->
   <iframe 
-    src="https://www.youtube.com/embed/EVRlL32LLzE?autoplay=1&mute=1&loop=1&playlist=EVRlL32LLzE&controls=0&modestbranding=1&rel=0&showinfo=0" 
+    src="https://www.youtube.com/embed/EVRlL32LLzE?autoplay=1&mute=1&loop=1&playlist=EVRlL32LLzE&controls=0&modestbranding=1&rel=0&showinfo=0?v=1" 
     frameborder="0" 
     allow="autoplay; fullscreen" 
     allowfullscreen>
