@@ -25,8 +25,21 @@
   </style>
 </head>
 <body>
-  <video autoplay loop muted playsinline>
+  <video id="bgVideo" loop muted playsinline>
     <source src="video.mp4" type="video/mp4">
+    你的瀏覽器不支援 HTML5 影片
   </video>
+
+  <script>
+    const video = document.getElementById('bgVideo');
+    // 嘗試自動播放
+    video.play().catch(() => {
+      // 如果被阻擋，點一下頁面觸發播放
+      document.body.addEventListener('click', () => {
+        video.play();
+      }, { once: true });
+    });
+  </script>
 </body>
 </html>
+
